@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "ES5",
+        "module": "CommonJS",
+        "newLine": "LF",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "sourceMap": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": ["node_modules"]
+}

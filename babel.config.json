@@ -1,0 +1,37 @@
+{
+    "presets": ["solid", "@babel/preset-typescript"],
+    "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread"
+    ],
+    "env": {
+        "development": {
+            "plugins": ["solid-refresh/babel"]
+        },
+        "test": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ]
+            ]
+        },
+        "production": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "useBuiltIns": "entry",
+                        "corejs": 3,
+                        "exclude": ["transform-typeof-symbol"]
+                    }
+                ]
+            ]
+        }
+    }
+}
